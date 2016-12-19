@@ -1,0 +1,109 @@
+ <!--React Native默认样式 or 其他样式-->
+<style>
+	body{margin:0;font-family:'微软雅黑';color:#666;display:flex;font-size:14px;}
+	body *{display:flex;flex-direction:column;box-sizing:border-box;overflow:hidden;border-style:solid;border-width:0;}
+	script{display:none;}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+<!-- js部分：模块名为Index -->
+<script componentName="Index" type="none">
+	Index.prototype.componentWillMount = function(){
+
+	};
+</script>
+
+<!--自定义样式：注意事项，RN不支持类似border:1px solid #DDD这种缩写-->
+<style id="style">
+	.layout{
+		flex:1;
+		background-color:#f5f5f5;
+	}
+	.header{
+		background-color:#64a8fd;
+		padding-bottom:20px;
+	}
+	.Htitle{
+		justify-content:center;
+		height:44px;
+	}
+	.title{
+		text-align:center;
+		color:#FFF;
+		font-size:17px;
+	}
+	.Himg{
+		flex-direction:row;
+		justify-content:center;
+		align-items:center;
+		padding-left:70px;/*((80+20+50)/2-40)*2*/
+	}
+	.HIbox{
+		width:84px;
+	    height:84px;
+	    border-radius: 42px;
+	    border-width:4px;
+	    border-color:rgba(255,255,255,0.5);
+	}
+	.HIimg{
+		width:76px;
+		height:76px;
+		margin:0;
+		border-radius:38px;
+		border-width:4px;
+	    border-color:#FFF;
+	}
+	.HIsignin{
+		margin-left:20px;
+		background-color: #FB7B54;
+		height: 25px;
+		width: 50px;
+		border-radius: 12.5px;
+		justify-content: center;
+	}
+	.HIStxt{
+		text-align:center;
+		color:#FFF;
+	}
+	.ff{
+		font-family:'dkapp';
+	}
+	.recharge{
+		position:absolute;
+		right:10px;
+	    top:136px;
+	    width: 60px;
+	    height: 25px;
+	    background-color: #477fc4;
+	    border-radius: 12.5px;
+	    flex-direction:row;
+	    justify-content:center;
+	    align-items:center;
+	}
+	.RCtxt{
+		text-align:center;
+		font-size: 12px;
+		color: #FFF;
+	}
+</style>
+<!--布局start-->
+<View class="layout">
+	<View class="header">
+		<View class="Htitle">
+			<Text class="title">个人中心</Text>
+		</View>
+		<View class="Himg">
+			<View class="HIbox">
+				<Image class="HIimg" src="../../images/header_tou_f.png"/>
+			</View>
+			<TouchableOpacity class="HIsignin" activeOpacity={0.8}>
+				<Text class="HIStxt">签到</Text>
+			</TouchableOpacity>
+		</View>
+	</View>
+	<View class="recharge">
+		<Text class="ff RCtxt">¥</Text>
+		<Text class="RCtxt"> 充值</Text>
+	</View>
+</View>
+<!--布局end-->
